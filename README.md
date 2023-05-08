@@ -1,4 +1,4 @@
-# AutoDetectFiles
+# DetectFiles
 
 This repository contains a Bash script `detect_files.sh` which monitors a source directory for the creation of specific files and moves them to a destination directory. The script can be configured either through a configuration file `config.cfg` or through command line arguments.
 
