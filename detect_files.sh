@@ -1,9 +1,13 @@
 #!/bin/bash
 
-if [[ -f "config.cfg" ]]; then
+# Get the directory where the script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+# Check if config.cfg exists in the script directory
+if [[ -f "$SCRIPT_DIR/config.cfg" ]]; then
     # Read configuration from file
-    source config.cfg
-    echo "Configuration loaded from config.cfg:"
+    source "$SCRIPT_DIR/config.cfg"
+    echo "Configuration loaded from $SCRIPT_DIR/config.cfg:"
 else
     # Read configuration from command line arguments
     SOURCE_DIR="$1"
